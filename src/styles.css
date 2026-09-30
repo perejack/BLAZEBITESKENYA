@@ -1,0 +1,210 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * BlazeBites design system — charcoal + ember orange.
+ * Display: Playfair Display (serif). Body/UI: Outfit.
+ * All colors are oklch semantic tokens. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-ember: var(--ember);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--primary);
+  --color-chart-2: var(--ember);
+  --color-chart-3: var(--muted);
+  --color-chart-4: var(--accent);
+  --color-chart-5: var(--secondary);
+  --color-sidebar: var(--card);
+  --color-sidebar-foreground: var(--card-foreground);
+  --color-sidebar-primary: var(--primary);
+  --color-sidebar-primary-foreground: var(--primary-foreground);
+  --color-sidebar-accent: var(--accent);
+  --color-sidebar-accent-foreground: var(--accent-foreground);
+  --color-sidebar-border: var(--border);
+  --color-sidebar-ring: var(--ring);
+}
+
+:root {
+  --radius: 0.9rem;
+
+  --background: oklch(0.145 0.012 55);
+  --foreground: oklch(0.965 0.006 80);
+  --card: oklch(0.192 0.013 52);
+  --card-foreground: oklch(0.965 0.006 80);
+  --popover: oklch(0.175 0.013 52);
+  --popover-foreground: oklch(0.965 0.006 80);
+
+  --primary: oklch(0.742 0.166 56);
+  --primary-foreground: oklch(0.17 0.02 50);
+  --ember: oklch(0.63 0.2 36);
+
+  --secondary: oklch(0.255 0.014 52);
+  --secondary-foreground: oklch(0.955 0.006 80);
+  --muted: oklch(0.24 0.012 52);
+  --muted-foreground: oklch(0.7 0.012 70);
+  --accent: oklch(0.29 0.03 52);
+  --accent-foreground: oklch(0.965 0.006 80);
+
+  --destructive: oklch(0.58 0.21 26);
+  --destructive-foreground: oklch(0.98 0.005 80);
+  --success: oklch(0.7 0.16 150);
+  --success-foreground: oklch(0.16 0.02 150);
+
+  --border: oklch(0.29 0.012 52);
+  --input: oklch(0.31 0.012 52);
+  --ring: oklch(0.742 0.166 56);
+
+  --gradient-ember: linear-gradient(135deg, var(--ember), var(--primary));
+  --gradient-fade-up: linear-gradient(
+    to top,
+    oklch(0.145 0.012 55) 0%,
+    oklch(0.145 0.012 55 / 0.9) 26%,
+    oklch(0.145 0.012 55 / 0.74) 55%,
+    oklch(0.145 0.012 55 / 0.8) 100%
+  );
+  --shadow-ember: 0 18px 50px -18px oklch(0.742 0.166 56 / 0.55);
+  --shadow-plate: 0 26px 60px -30px oklch(0 0 0 / 0.9);
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+}
+
+@utility text-gradient-ember {
+  background-image: var(--gradient-ember);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+@utility surface-plate {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-plate);
+}
+
+@utility hero-scrim {
+  background-image:
+    radial-gradient(
+      ellipse 70% 55% at 50% 52%,
+      oklch(0.145 0.012 55 / 0.78) 0%,
+      oklch(0.145 0.012 55 / 0.2) 100%
+    ),
+    var(--gradient-fade-up);
+}
+
+@utility grain {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: radial-gradient(oklch(1 0 0) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
+
+@keyframes ember-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-ember-pulse {
+  animation: ember-pulse 2s ease-in-out infinite;
+}
+
+@utility animate-rise-in {
+  animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
