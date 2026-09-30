@@ -22,11 +22,11 @@ export const Route = createFileRoute("/privacy-policy")({
 const SECTIONS = [
   {
     t: "What we collect",
-    b: "When you place an order we collect your full name, phone number, the items in your order and any note you leave for the kitchen. If you pay with M-PESA we also store the transaction code and amount so we can match your payment to your order.",
+    b: "When you place an order we collect your full name, phone number, the items in your order and any special instructions you provide. If you pay with M-PESA we also store the transaction code and amount so we can match your payment to your order.",
   },
   {
     t: "Why we collect it",
-    b: "Your name and phone number let us prepare the right order, call you when it is ready and resolve payment questions. Order details let us issue your receipt and improve our menu.",
+    b: "Your name and phone number let us process the right order, contact you when it is ready and resolve payment questions. Order details let us issue your receipt and improve our menu.",
   },
   {
     t: "Payments",

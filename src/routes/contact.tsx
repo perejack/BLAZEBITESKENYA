@@ -53,7 +53,7 @@ function ContactPage() {
       <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.1fr]">
         <div className="space-y-5">
           {[
-            { icon: MapPin, t: "Kitchen", d: "Kimathi Street, Nairobi CBD, opposite Bazaar Plaza" },
+            { icon: MapPin, t: "Location", d: "Kimathi Street, Nairobi CBD, opposite Bazaar Plaza" },
             { icon: Phone, t: "Phone & WhatsApp", d: "+254 712 345 678" },
             { icon: Mail, t: "Email", d: "hello@blazebites.co.ke" },
             { icon: Clock, t: "Open hours", d: "Monday – Sunday, 10:00am to 11:00pm" },

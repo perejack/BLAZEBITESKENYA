@@ -25,7 +25,7 @@ export function CartSheet() {
             <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 text-center">
               <ShoppingBag className="size-12 text-muted-foreground" />
               <p className="text-sm text-muted-foreground">
-                Your bag is empty. Fire it up with something from the menu.
+                Your bag is empty. Add something from the menu to get started.
               </p>
               <Button asChild className="rounded-full" onClick={() => setOpen(false)}>
                 <Link to="/menu">Browse the menu</Link>

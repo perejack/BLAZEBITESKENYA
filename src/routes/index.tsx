@@ -74,8 +74,8 @@ function Index() {
           {[
             {
               icon: Flame,
-              title: "Grilled to order",
-              body: "Nothing sits under a lamp. Every order hits the charcoal when you press pay.",
+              title: "Fresh every order",
+              body: "We don't pre-batch. Every item is prepared fresh from the moment you place your order.",
             },
             {
               icon: Receipt,
@@ -105,7 +105,7 @@ function Index() {
       <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="eyebrow">Straight off the grill</p>
+            <p className="eyebrow">Order now, pay with M-PESA</p>
             <h2 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl">
               The favourites
             </h2>
