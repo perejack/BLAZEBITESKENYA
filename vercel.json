@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/hashback/initiate",
+      "destination": "/api/hashback/initiate.js"
+    },
+    {
+      "source": "/api/hashback/status",
+      "destination": "/api/hashback/status.js"
+    },
+    {
+      "source": "/api/hashback/webhook",
+      "destination": "/api/hashback/webhook.js"
+    }
+  ]
+}
