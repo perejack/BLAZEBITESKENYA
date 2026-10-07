@@ -1,5 +1,13 @@
 {
   "version": 2,
+  "build": {
+    "env": {
+      "DANGEROUSLY_DEPLOY_VULNERABLE_TANSTACK_START_XSS": "1"
+    }
+  },
+  "env": {
+    "DANGEROUSLY_DEPLOY_VULNERABLE_TANSTACK_START_XSS": "1"
+  },
   "rewrites": [
     {
       "source": "/api/hashback/initiate",
